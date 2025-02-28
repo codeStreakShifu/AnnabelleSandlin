@@ -74,7 +74,7 @@ body {
     background: white;
     color: #2C3E50;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 153, 255, 0.6);
 }
 
 .author img {
