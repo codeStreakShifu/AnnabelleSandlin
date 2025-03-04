@@ -46,7 +46,7 @@
         nav ul li a {
             text-decoration: none;
             color: #888;
-            font-size: 18px;
+            font-size: 1.5rem;
             font-weight: 500;
         }
         nav ul li a:hover, nav ul li a.active {
@@ -59,8 +59,8 @@
         
         .social-icons a {
             text-decoration: none;
-            color: #000;
-            font-size: 24px;
+            color: #2c2b2b;
+            font-size: 2rem;
             transition: color 0.3s ease;
         }
         
@@ -114,72 +114,118 @@
             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
             transform: translateX(-50%);
         }
+        
+
         .books {
-            padding: 50px 10%;
-            justify-content: center;
             text-align: center;
+            padding: 50px 10%;
+            font-family: "Playfair Display", serif; /* Adjust to match the reference font */
         }
-        .books h2{
-            font-size: 3vw;
-        }
-        .book-list {
+        
+        .books-header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 45px; /* Adjust spacing between books */
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        
+        .books-header h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        
+        .books-header .view-all {
+            font-size: 1rem;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .book-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
         
         .book {
-            text-align: center; /* Centers text under images */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .book img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-        
-
-        .book-cover {
-            position: relative;
-            
-            width: 300px; /* Adjust as needed */
-            height: 450px; /* Adjust as needed */
+            width: 300px;
+            height: 450px;
             perspective: 1000px;
         }
         
-        .book-cover img {
+        .book-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        .book:hover .book-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .book-front, .book-back {
             width: 100%;
             height: 100%;
             position: absolute;
             backface-visibility: hidden;
-            transition: transform 0.6s ease-in-out;
+            border-radius: 10px;
         }
         
-        .book-cover .front {
-            transform: rotateY(0deg);
+        .book-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
         
-        .book-cover .back {
+        .book-back {
+            background: #fff;
             transform: rotateY(180deg);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .book-back img{
+            width: 100%;
+            height: 100%;
         }
         
-        .book-cover:hover .front {
-            transform: rotateY(180deg);
+        .book-back h3 {
+            font-size: 1.5rem;
         }
         
-        .book-cover:hover .back {
-            transform: rotateY(0deg);
+        .author {
+            font-weight: bold;
+            color: #cc0000;
+        }
+        
+        .description {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .order-link {
+            margin-top: 10px;
+            color: #cc0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .order-link:hover {
+            text-decoration: underline;
         }
         
         
         .welcome-section {
             text-align: center;
             padding: 60px 10%;
-            background: #fff;
+            background: #e8f0f7;
             color: #b29564;
         }
         .welcome-section h2 {
@@ -227,9 +273,9 @@
             max-width: 50%;
         }
         .author-story h2 {
-            font-size: 36px;
+            font-size: 24px;
             font-weight: bold;
-            color: #000;
+            color: #b29564
         }
         .author-story p {
             font-size: 18px;
@@ -286,10 +332,11 @@
         .read-more {
             display: inline-block;
             margin-top: 20px;
+            padding-bottom: 5px;
             color: #000;
             text-decoration: none;
             font-size: 18px;
-            border-bottom: 2px solid #b29564;
+            border-bottom: 1px solid #b29564;
         }
 
         footer {
@@ -335,32 +382,8 @@
             <img src="./styles/feat-book1.jpg" alt="Book Cover">
         </div>
     </section>
-    <section class="books">
-        <h2 data-aos="fade-down" data-aos-duration="1500">Best Selling Books</h2>
-        <div class="book-list">
-            <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="fade-right" data-aos-duration="1500" src="./styles/feat-book1.jpg" alt="Book 1 Front">
-                    <img class="back" src="./styles/feat-book1-back.jpg" alt="Book 1 Back">
-                </div>
-                <p>Beyond Barriers</p>
-            </div>
-            <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="zoom-in" data-aos-duration="1500" src="./styles/book1.jpg" alt="Book 2 Front">
-                    <img class="back" src="./styles/book1-back.jpg" alt="Book 2 Back">
-                </div>
-                <p>The Barn That Crowed</p>
-            </div>
-            <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="fade-left" data-aos-duration="1500" src="./styles/book2.jpg" alt="Book 3 Front">
-                    <img class="back" src="./styles/book2-back.jpg" alt="Book 3 Back">
-                </div>
-                <p>The Barn That Crowed 2</p>
-            </div>
-        </div>
-    </section>
+
+    
     
     <section class="welcome-section" data-aos="fade-up" data-aos-duration="1500">
 
@@ -378,18 +401,59 @@
     <section class="author-story">
         <img src="./styles/prof-img.png" alt="Grace Bryant Writing">
         <div class="text">
-            <h2>The Story of <span style="color: #000; font-weight: bold;">Annabelle Sandlin</span></h2>
+            <h2>The Story of <br> <span style="color: #000; font-weight: bold; font-size: 48px">Annabelle Sandlin</span></h2>
             <p><strong>A Life of Purpose: Dave Davey's Journey of Faith and Resilience</strong></p>
             <p>Annabelle Sandlin wrote about her husband, Dave Davey, she tells the deeply emotional story about a man who was struck by polio at an early age. That should have been it but after receiving Christ as his personal Savior and discovering God’s purpose in his life, he rose above his physical ability to fulfill that purpose throughout his life.⁣</p>
             <a href="#" class="read-more">→ Read More</a>
             <div class="stats">
                 <div>
-                    <span>12</span>
+                    <span>10</span>
                     Books Published
                 </div>
                 <div>
                     <span>08</span>
                     Best Selling Books
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="books" data-aos="fade-up">
+        <div class="books-header">
+            <h2>Best Selling Books</h2>
+            <a href="#" class="view-all">→ View All Books</a>
+        </div>
+        <div class="book-container">
+            <div class="book">
+                <div class="book-inner">
+                    <div class="book-front">
+                        <img src="./styles/feat-book1.jpg" alt="Luctus">
+                    </div>
+                    <div class="book-back">
+                        <img src="./styles/feat-book1-back.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="book">
+                <div class="book-inner">
+                    <div class="book-front">
+                        <img src="./styles/book1.jpg" alt="Luctus">
+                    </div>
+                    <div class="book-back">
+                        <img src="./styles/book1-back.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="book">
+                <div class="book-inner">
+                    <div class="book-front">
+                        <img src="./styles/book2.jpg" alt="Luctus">
+                    </div>
+                    <div class="book-back">
+                        <img src="./styles/book2-back.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

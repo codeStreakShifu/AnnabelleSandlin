@@ -1,0 +1,89 @@
+/*.books {
+            padding: 50px 10%;
+            justify-content: center;
+            text-align: center;
+            background: #e8f0f7;
+        }
+        .books h2{
+            font-size: 3vw;
+        }
+        .book-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 45px; /* Adjust spacing between books 
+        }
+        
+        .book {
+            text-align: center; /* Centers text under images 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .book img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        
+
+        .book-cover {
+            position: relative;
+            
+            width: 300px; /* Adjust as needed 
+            height: 450px; /* Adjust as needed 
+            perspective: 1000px;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.6s ease-in-out;
+        }
+        
+        .book-cover .front {
+            transform: rotateY(0deg);
+        }
+        
+        .book-cover .back {
+            transform: rotateY(180deg);
+        }
+        
+        .book-cover:hover .front {
+            transform: rotateY(180deg);
+        }
+        
+        .book-cover:hover .back {
+            transform: rotateY(0deg);
+        } */
+
+
+        <!-- <section class="books">
+        <h2 data-aos="fade-down" data-aos-duration="1500">Best Selling Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <div class="book-cover">
+                    <img class="front" data-aos="fade-right" data-aos-duration="1500" src="./styles/feat-book1.jpg" alt="Book 1 Front">
+                    <img class="back" src="./styles/feat-book1-back.jpg" alt="Book 1 Back">
+                </div>
+                <p>Beyond Barriers</p>
+            </div>
+            <div class="book">
+                <div class="book-cover">
+                    <img class="front" data-aos="zoom-in" data-aos-duration="1500" src="./styles/book1.jpg" alt="Book 2 Front">
+                    <img class="back" src="./styles/book1-back.jpg" alt="Book 2 Back">
+                </div>
+                <p>The Barn That Crowed</p>
+            </div>
+            <div class="book">
+                <div class="book-cover">
+                    <img class="front" data-aos="fade-left" data-aos-duration="1500" src="./styles/book2.jpg" alt="Book 3 Front">
+                    <img class="back" src="./styles/book2-back.jpg" alt="Book 3 Back">
+                </div>
+                <p>The Barn That Crowed 2</p>
+            </div>
+        </div>
+    </section> -->
