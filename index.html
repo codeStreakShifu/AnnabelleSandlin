@@ -115,7 +115,8 @@
             transform: translateX(-50%);
         }
         .books {
-
+            padding: 50px 10%;
+            justify-content: center;
             text-align: center;
         }
         .books h2{
@@ -123,16 +124,31 @@
         }
         .book-list {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 3vw;
+            align-items: center;
+            gap: 45px; /* Adjust spacing between books */
         }
+        
+        .book {
+            text-align: center; /* Centers text under images */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .book img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        
 
         .book-cover {
             position: relative;
+            
             width: 300px; /* Adjust as needed */
-            height: auto;
-            perspective: 10000px;
+            height: 450px; /* Adjust as needed */
+            perspective: 1000px;
         }
         
         .book-cover img {
