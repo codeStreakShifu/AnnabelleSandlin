@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <title>Annabelle Sandlin</title>
     <style>
         body {
@@ -115,51 +114,18 @@
             transform: translateX(-50%);
         }
         .books {
-
+            padding: 50px 10%;
             text-align: center;
-        }
-        .books h2{
-            font-size: 3vw;
         }
         .book-list {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 3vw;
+            gap: 20px;
         }
-
-        .book-cover {
-            position: relative;
-            width: 300px; /* Adjust as needed */
-            height: auto;
-            perspective: 10000px;
+        .book img {
+            width: 200px;
+            display: block;
         }
-        
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            transition: transform 0.6s ease-in-out;
-        }
-        
-        .book-cover .front {
-            transform: rotateY(0deg);
-        }
-        
-        .book-cover .back {
-            transform: rotateY(180deg);
-        }
-        
-        .book-cover:hover .front {
-            transform: rotateY(180deg);
-        }
-        
-        .book-cover:hover .back {
-            transform: rotateY(0deg);
-        }
-        
-        
         .welcome-section {
             text-align: center;
             padding: 60px 10%;
@@ -179,21 +145,14 @@
         .awards {
             display: flex;
             justify-content: center;
-            gap: 45px;
+            gap: 30px;
             margin-top: 30px;
         }
         .award {
             text-align: center;
         }
         .award img {
-            width: 380px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-            transition: 2s ease-out, transform 0.6s ease-out;
-        }
-
-        .award img:hover{
-            transform: scale(1.1);
+            width: 80px;
         }
 
         .author-story {
@@ -287,8 +246,8 @@
 </head>
 <body>
     <header>
-        <div class="logo" data-aos="fade-right" data-aos-duration="1500"><img src="./styles/Annabelle.svg" alt=""></div>
-        <nav data-aos="fade-down" data-aos-duration="1500">
+        <div class="logo"><img src="./styles/Annabelle.svg" alt=""></div>
+        <nav>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
@@ -296,8 +255,8 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <div class="social-icons" data-aos="fade-left" data-aos-duration="1500">
-            <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
                 <i class='bx bxl-facebook'></i>
             </a>
             <a href="https://www.twitter.com" target="_blank" title="Twitter">
@@ -310,53 +269,40 @@
     </header>
     <section class="hero">
         <div class="text">
-            <p data-aos="fade-down" data-aos-duration="1500" class="title-p" style="color: #b29564; font-weight: bold;">Best Selling Book</p>
-            <h1 data-aos="fade-right" data-aos-duration="1500">Beyond Barriers </h1>
-            <p data-aos="zoom-in" data-aos-duration="1500">This book follows David Davey, whose life changed after contracting polio in 1948. Experience his journey as a 12-year-old in an iron lung, discovering his God-given purpose. See how he became a Christian leader, transforming Goodwill Industries and advocating for disability rights. As a key liaison, Dave played a vital role in assisting Senator Bob Dole’s office in passing the Disabilities Act.</p>
-            <button data-aos="fade-up" data-aos-duration="1500" onclick="showMessage()">→ Read Now</button>
+            <p class="title-p" style="color: #b29564; font-weight: bold;">Best Selling Book</p>
+            <h1>Beyond Barriers</h1>
+            <p>This book follows David Davey, whose life changed after contracting polio in 1948. Experience his journey as a 12-year-old in an iron lung, discovering his God-given purpose. See how he became a Christian leader, transforming Goodwill Industries and advocating for disability rights. As a key liaison, Dave played a vital role in assisting Senator Bob Dole’s office in passing the Disabilities Act.</p>
+            <button onclick="showMessage()">→ Read Now</button>
         </div>
-        <div data-aos="zoom-in" data-aos-duration="1500" class="hero-image">
+        <div class="hero-image">
             <img src="./styles/feat-book1.jpg" alt="Book Cover">
         </div>
     </section>
     <section class="books">
-        <h2 data-aos="fade-down" data-aos-duration="1500">Best Selling Books</h2>
+        <h2>Best Selling Books</h2>
         <div class="book-list">
             <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="fade-right" data-aos-duration="1500" src="./styles/feat-book1.jpg" alt="Book 1 Front">
-                    <img class="back" src="./styles/feat-book1-back.jpg" alt="Book 1 Back">
-                </div>
+                <img src="./styles/feat-book.jpg" alt="Book 1">
                 <p>Beyond Barriers</p>
             </div>
             <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="zoom-in" data-aos-duration="1500" src="./styles/book1.jpg" alt="Book 2 Front">
-                    <img class="back" src="./styles/book1-back.jpg" alt="Book 2 Back">
-                </div>
-                <p>The Barn That Crowed</p>
+                <img src="book2.jpg" alt="Book 2">
+                <p>Ultrices aliquam</p>
             </div>
             <div class="book">
-                <div class="book-cover">
-                    <img class="front" data-aos="fade-left" data-aos-duration="1500" src="./styles/book2.jpg" alt="Book 3 Front">
-                    <img class="back" src="./styles/book2-back.jpg" alt="Book 3 Back">
-                </div>
-                <p>The Barn That Crowed 2</p>
+                <img src="book3.jpg" alt="Book 3">
+                <p>Feugiat Maecenas</p>
             </div>
         </div>
     </section>
-    
-    <section class="welcome-section" data-aos="fade-up" data-aos-duration="1500">
-
-        <h2>Beyond Barriers: The Inspiring Life of Dave Davey</h2>
-        <p>Be inspired by Dave Davey’s resilience and optimism. <br> Get your copy of Beyond Barriers today on Amazon and Barnes & Noble.</p>
-        
+    <section class="welcome-section">
+        <h2>Welcome to the World of Pure Dolor Ipsum Tortor Pretium.</h2>
+        <p>Egestas gravida erat enim ac morbi at malesuada arcu habitant blandit pulvinar tellus consectetur mi.</p>
         <div class="awards">
-            <div class="award"><img src="./styles/image1.jpg" alt="Ultra Prestigious Winner"></div>
-            <div class="award"><img src="./styles/image2.jpg" alt="Hyper Best Award"></div>
-            <div class="award"><img src="./styles/image3.jpg" alt="Ultimate Winner"></div>
+            <div class="award"><img src="award1.png" alt="Ultra Prestigious Winner"></div>
+            <div class="award"><img src="award2.png" alt="Hyper Best Award"></div>
+            <div class="award"><img src="award3.png" alt="Ultimate Winner"></div>
         </div>
-
     </section>
 
     <section class="author-story">
@@ -382,8 +328,6 @@
     <footer>
         <p>Copyright &copy; 2025 Annabelle Sandlin</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="./styles/scripts.js"></script>
     <script>
         function showMessage() {
             alert('Thank you for your interest! Sample will be available soon.');

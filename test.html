@@ -3,156 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Author Website</title>
+    <title>Grace Bryant - Author</title>
     <style>
         body {
-            font-family: 'Helvetica', sans-serif;
+            font-family: 'Serif', serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background-color: #f8f8f8;
+            color: #333;
+            background: #fff;
         }
         header {
-            background: #fff;
-            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 10%;
+            background: #f8f8f8;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        .logo-container img {
-            height: 50px;
-            margin-right: 10px;
-        }
-        .menu {
-            list-style: none;
-            display: flex;
-        }
-        .menu li {
-            margin: 0 15px;
-        }
-        .menu a {
-            text-decoration: none;
-            color: #333;
+        .logo {
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
-        .hero {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #888;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: #000;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+        }
+        .author-story {
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            padding: 50px;
-            background: #f0f0f0;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards;
+            padding: 60px 10%;
+            background: #f8f8f8;
         }
-        .hero img {
-            max-width: 300px;
+        .author-story img {
+            min-width: 55%;
+            margin-right: 40px;
         }
-        .author-section {
+        .author-story .text {
+            max-width: 50%;
+        }
+        .author-story h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+        }
+        .author-story p {
+            font-size: 18px;
+            color: #666;
+        }
+        .stats {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            padding: 50px;
-            background: #fff;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards 0.5s;
+            gap: 40px;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #b29564;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
-        .author-section img {
-            max-width: 200px;
-            margin-right: 20px;
+        .stats::before,
+        .stats::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #b29564;
         }
-        .book-card {
-            text-align: center;
-            background: #fff;
-            padding: 20px;
-            margin: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s forwards 1s;
+        .stats::before {
+            top: 0;
+        }
+        .stats::after {
+            bottom: 0;
+        }
+        .stats div {
+            position: relative;
+        }
+        .stats div::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -50%;
+            width: 2px;
+            height: 90%;
+            background: #b29564;
+            transform: translateY(-50%);
+        }
+        .stats div:first-child::before {
+            display: none;
+        }
+        .stats span {
+            display: block;
+            font-size: 50px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 20px;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 2px solid #b29564;
         }
         footer {
             background: #333;
-            color: #fff;
+            color: white;
             text-align: center;
             padding: 20px;
             margin-top: 20px;
         }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @media (max-width: 768px) {
-            .hero, .author-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero img, .author-section img {
-                max-width: 100%;
-                margin-bottom: 20px;
-            }
-            .menu {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("Website Loaded");
-        });
-    </script>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="logo.gif" alt="Logo">
-            <h1>Annabelle Sandlin</h1>
-        </div>
+        <div class="logo">Grace Bryant</div>
         <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Author</a></li>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Books</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
     </header>
-    
-    <section class="hero">
-        <div>
-            <h2>Meet Your Next Favorite Book</h2>
-            <p>Discover the latest bestseller that will captivate your mind.</p>
+    <section class="author-story">
+        <img src="./styles/author-img-main.jpg" alt="Grace Bryant Writing">
+        <div class="text">
+            <h2>The Story of <span style="color: #000; font-weight: bold;">Grace Bryant</span></h2>
+            <p><strong>Dapibus id interdum fusce sed odio massa tellus amet, faucibus nibh consequat justo mauris, donec nec tempus in volutpat iaculis pellentesque in urna.</strong></p>
+            <p>Diam, urna, ornare leo facilisis suspendisse eu rutrum id augue cursus tincidunt nisl eget ornare pharetra ac pharetra, pulvinar ipsum sed amet diam morbi amet cursus blandit augue feugiat arcu aliquet egestas id diam rhoncus, mollis arcu pharetra quis duis morbi a nunc diam mauris ut tortor ipsum.</p>
+            <a href="#" class="read-more">→ Read More</a>
+            <div class="stats">
+                <div>
+                    <span>12</span>
+                    Books Published
+                </div>
+                <div>
+                    <span>08</span>
+                    Best Selling Books
+                </div>
+            </div>
         </div>
-        <img src="book.png" alt="Book Cover">
     </section>
-    
-    <section class="author-section">
-        <img src="./styles/prof.png" alt="Author Image">
-        <div>
-            <h2>About Annabelle Sandlin</h2>
-            <p>Annabelle Sandlin, a wife, mother, and grandmother, has completed her new book "Beyond Barriers": a gripping and potent biographical work.</p>
-        </div>
-    </section>
-    
-    <section class="book-card">
-        <h2>Featured Book</h2>
-        <img src="./styles/feat-book.jpg" alt="Featured Book">
-        <h3>Beyond Barriers</h3>
-        <p>A compelling story that takes readers on a journey of discovery, adventure, and inspiration.</p>
-        <a href="#">Read More</a>
-    </section>
-    
     <footer>
-        <p>&copy; 2025 Annabelle Sandlin. All rights reserved.</p>
+        <p>Copyright &copy; 2025 Grace Bryant</p>
     </footer>
 </body>
 </html>
