@@ -3,203 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Annabelle Sandlin - Author</title>
+    <title>Author Website</title>
     <style>
-        /* General Styles */
         body {
-            font-family: "Helvetica", sans-serif;
+            font-family: 'Helvetica', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #E3F2FD, #A7C7E7);
-            color: #2C3E50;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
         }
-
-        /* Header */
         header {
-            background-color: #BFD7ED;
-            color: #2C3E50;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
+            background: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-
         .logo-container {
             display: flex;
             align-items: center;
-            justify-content: center;
         }
-
         .logo-container img {
-            width: 50px;
             height: 50px;
             margin-right: 10px;
         }
-
-        .nav ul {
+        .menu {
             list-style: none;
-            padding: 0;
             display: flex;
-            justify-content: center;
         }
-
-        .nav ul li {
+        .menu li {
             margin: 0 15px;
         }
-
-        .nav ul li a {
-            color: #2C3E50;
+        .menu a {
             text-decoration: none;
+            color: #333;
             font-weight: bold;
-            transition: color 0.3s ease-in-out;
         }
-
-        .nav ul li a:hover {
-            color: #689CD2;
-        }
-
-        /* Intro Section */
-        .intro {
+        .hero {
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            text-align: center;
-            padding: 60px 20px;
-            height: 60vh;
-            position: relative;
-            overflow: hidden;
+            justify-content: space-around;
+            padding: 50px;
+            background: #f0f0f0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
         }
-
-        .intro::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(183, 222, 237, 0.6);
+        .hero img {
+            max-width: 300px;
         }
-
-        .quote-container {
-            position: relative;
-            max-width: 80%;
-            z-index: 1;
-            animation: fadeIn 2s ease-in-out;
+        .author-section {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+            background: #fff;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
         }
-
-        .quote {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2C3E50;
-            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+        .author-section img {
+            max-width: 200px;
+            margin-right: 20px;
         }
-
-        /* Featured Book */
-        .featured-book {
-            text-align: center;
-            padding: 50px 20px;
-            background: white;
-            color: #2C3E50;
-        }
-
         .book-card {
-            background: #E3F2FD;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            max-width: 400px;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .book-card img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        .book-card h3 {
-            margin: 15px 0 10px;
-            font-size: 1.5rem;
-            color: #2C3E50;
-        }
-
-        .book-card p {
-            font-size: 1rem;
-            color: #34495E;
-            margin-bottom: 15px;
-        }
-
-        .book-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #689CD2;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .book-card a:hover {
-            background: #5A8EBF;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #A7C7E7;
-            color: #2C3E50;
             text-align: center;
-            padding: 10px;
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1s;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
             margin-top: 20px;
         }
-
-        .social-icons {
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #2C3E50;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #689CD2;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
+        @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+        @media (max-width: 768px) {
+            .hero, .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero img, .author-section img {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .menu {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("Website Loaded");
+        });
+    </script>
 </head>
 <body>
-
     <header>
         <div class="logo-container">
-            <img src="https://via.placeholder.com/50" alt="Logo">
-            <h1 class="site-name">Annabelle Sandlin</h1>
-        </div>  
-        <nav class="nav">
-            <ul>
+            <img src="logo.gif" alt="Logo">
+            <h1>Annabelle Sandlin</h1>
+        </div>
+        <nav>
+            <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Author</a></li>
                 <li><a href="#">Books</a></li>
@@ -208,31 +126,33 @@
             </ul>
         </nav>
     </header>
-
-    <section class="intro">
-        <div class="quote-container">
-            <p class="quote">"Every book is a journey, every page a lesson, and every story a spark of inspiration waiting to light the way."</p>
+    
+    <section class="hero">
+        <div>
+            <h2>Meet Your Next Favorite Book</h2>
+            <p>Discover the latest bestseller that will captivate your mind.</p>
+        </div>
+        <img src="book.png" alt="Book Cover">
+    </section>
+    
+    <section class="author-section">
+        <img src="./styles/prof.png" alt="Author Image">
+        <div>
+            <h2>About Annabelle Sandlin</h2>
+            <p>Annabelle Sandlin, a wife, mother, and grandmother, has completed her new book "Beyond Barriers": a gripping and potent biographical work.</p>
         </div>
     </section>
-
-    <section class="featured-book">
+    
+    <section class="book-card">
         <h2>Featured Book</h2>
-        <div class="book-card">
-            <img src="./styles/feat-book.jpg" alt="Book Cover">
-            <h3>Title of the Book</h3>
-            <p>A compelling story that takes readers on a journey of discovery, adventure, and inspiration.</p>
-            <a href="#">Read More</a>
-        </div>
+        <img src="./styles/feat-book.jpg" alt="Featured Book">
+        <h3>Beyond Barriers</h3>
+        <p>A compelling story that takes readers on a journey of discovery, adventure, and inspiration.</p>
+        <a href="#">Read More</a>
     </section>
-
+    
     <footer>
         <p>&copy; 2025 Annabelle Sandlin. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#">📘 Facebook</a>
-            <a href="#">📷 Instagram</a>
-            <a href="#">🐦 Twitter</a>
-        </div>
     </footer>
-
 </body>
 </html>
