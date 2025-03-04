@@ -6,347 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
     <title>Annabelle Sandlin</title>
-    <style>
-        body {
-            font-family: 'Serif', serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: #fff;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            background: #f8f8f8;
-        }
-        .logo {
-            font-size: 58px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
 
-        .logo img{
-            width: 100%;
-            height: auto;
-        }
-
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 30px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #888;
-            font-size: 1.5rem;
-            font-weight: 500;
-        }
-        nav ul li a:hover, nav ul li a.active {
-            color: #000;
-        }
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-icons a {
-            text-decoration: none;
-            color: #2c2b2b;
-            font-size: 2rem;
-            transition: color 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            color: #b29564;
-        }
-        
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px 10%;
-            background: linear-gradient(to right, #f8f8f8 62%, rgba(0,0,0,0) 70%), url('./styles/hero-bg.avif');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero .text {
-            max-width: 40%;
-            text-align: justify;
-        }
-        .hero h1 {
-            font-size: 48px;
-            font-weight: bold;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #666;
-        }
-
-        .text .title-p{
-            font-size: 2vw;
-        }
-        .hero button {
-            padding: 12px 24px;
-            font-size: 16px;
-            border: 2px solid #000;
-            background: transparent;
-            color: #000;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .hero button:hover {
-            background: #000;
-            color: #fff;
-        }
-        .hero-image img {
-            max-width: 400px;
-            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-            transform: translateX(-50%);
-        }
-        
-
-        .books {
-            text-align: center;
-            padding: 50px 10%;
-            font-family: "Playfair Display", serif; /* Adjust to match the reference font */
-        }
-        
-        .books-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding: 0 20px;
-        }
-        
-        .books-header h2 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        
-        .books-header .view-all {
-            font-size: 1rem;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .book-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .book {
-            width: 300px;
-            height: 450px;
-            perspective: 1000px;
-        }
-        
-        .book-inner {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-        
-        .book:hover .book-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .book-front, .book-back {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            backface-visibility: hidden;
-            border-radius: 10px;
-        }
-        
-        .book-front img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        
-        .book-back {
-            background: #fff;
-            transform: rotateY(180deg);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .book-back img{
-            width: 100%;
-            height: 100%;
-        }
-        
-        .book-back h3 {
-            font-size: 1.5rem;
-        }
-        
-        .author {
-            font-weight: bold;
-            color: #cc0000;
-        }
-        
-        .description {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        
-        .order-link {
-            margin-top: 10px;
-            color: #cc0000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .order-link:hover {
-            text-decoration: underline;
-        }
-        
-        
-        .welcome-section {
-            text-align: center;
-            padding: 60px 10%;
-            background: #f4faff;
-            color: #b29564;
-        }
-        .welcome-section h2 {
-            font-size: 36px;
-            font-weight: bold;
-        }
-        .welcome-section p {
-            font-size: 18px;
-            color: #666;
-            max-width: 800px;
-            margin: 10px auto;
-        }
-        .awards {
-            display: flex;
-            justify-content: center;
-            gap: 45px;
-            margin-top: 30px;
-        }
-        .award {
-            text-align: center;
-        }
-        .award img {
-            width: 380px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-            transition: 2s ease-out, transform 0.6s ease-out;
-        }
-
-        .award img:hover{
-            transform: scale(1.1);
-        }
-
-        .author-story {
-            display: flex;
-            align-items: center;
-            padding: 60px 10% 60px 0;
-            background: #f8f8f8;
-        }
-        .author-story img {
-            width: 45%;
-            height: 20%;
-            margin-right: 90px;
-        }
-        .author-story .text {
-            max-width: 50%;
-        }
-        .author-story h2 {
-            font-size: 24px;
-            font-weight: bold;
-            color: #b29564
-        }
-        .author-story p {
-            font-size: 18px;
-            color: #666;
-        }
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 40px;
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #b29564;
-            position: relative;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        .stats::before,
-        .stats::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #b29564;
-        }
-        .stats::before {
-            top: 0;
-        }
-        .stats::after {
-            bottom: 0;
-        }
-        .stats div {
-            position: relative;
-        }
-        .stats div::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: -50%;
-            width: 2px;
-            height: 90%;
-            background: #b29564;
-            transform: translateY(-50%);
-        }
-        .stats div:first-child::before {
-            display: none;
-        }
-        .stats span {
-            display: block;
-            font-size: 50px;
-        }
-        .read-more {
-            display: inline-block;
-            margin-top: 20px;
-            padding-bottom: 5px;
-            color: #000;
-            text-decoration: none;
-            font-size: 18px;
-            border-bottom: 1px solid #b29564;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -433,6 +95,7 @@
                         <img src="./styles/feat-book1-back.jpg" alt="">
                     </div>
                 </div>
+                <h3>Beyond Barriers</h3>
             </div>
     
             <div class="book">
@@ -444,6 +107,7 @@
                         <img src="./styles/book1-back.jpg" alt="">
                     </div>
                 </div>
+                <h3>The Barn That Crowed</h3>
             </div>
     
             <div class="book">
@@ -455,12 +119,17 @@
                         <img src="./styles/book2-back.jpg" alt="">
                     </div>
                 </div>
+                <h3>The Barn That Crowed 2</h3>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Copyright &copy; 2025 Annabelle Sandlin</p>
+        <p>&copy; 2025 Annabelle Sandlin. All rights reserved.</p>
+        <p>Contact us at: <a href="mailto:jonathankithcart@icloud.com">jonathankithcart@icloud.com</a></p>
+        <div class="seaamos">
+            <h4>Created by Sea Amos - <a href="https://codestreakshifu.github.io/who-am-I/">Designer Joseph</a></h4>
+        </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./styles/scripts.js"></script>
