@@ -106,16 +106,17 @@ main{
 .text .title-p{
     font-size: 2vw;
 }
-.hero button {
+.hero .button {
     padding: 12px 24px;
     font-size: 16px;
+    text-decoration: none;
     border: 2px solid #000;
     background: transparent;
     color: #000;
     cursor: pointer;
     transition: 0.3s;
 }
-.hero button:hover {
+.hero .button:hover {
     background: #000;
     color: #fff;
 }
