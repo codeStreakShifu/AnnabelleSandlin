@@ -1,0 +1,192 @@
+/* Responsive Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+}
+
+.nav-toggle {
+    display: none; /* Hide hamburger menu by default */
+}
+
+@media screen and (max-width: 1024px) {
+    .books-header h2{
+        font-size: 5vw;
+    }
+
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+    .social-icons.header{
+        display: none;
+    }
+    
+    .award img {
+        width: 90%;
+    }
+    
+    .nav-toggle {
+        display: block; /* Show only on smaller screens */
+        font-size: 1.7rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #504f4f;
+        transform: translateY(370%);
+        z-index: 1000;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+        background: #fff;
+        padding: 15px 0;
+        position: absolute;
+        top: auto;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icons + .nav-toggle {
+        margin-top: 20px; /* Ensure it is placed directly under social icons */
+    }
+    
+    nav ul.show {
+
+        display: inline;
+        transform: translateY(320%);
+        
+    }
+    nav ul li a{
+        margin-right: 10px;
+    }
+    .hero, .author-story, .stats, .footer-header {
+        overflow-x: hidden; /* Prevent overflow in specific sections */
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero .text {
+        max-width: 100%;
+    }
+    
+    .hero-image img {
+        max-width: 90%;
+        margin-top: 25px;
+        transform: none;
+    }
+    
+    .author-story {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+    
+    .author-story img {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .awards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    
+    
+    .book-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .book {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .books-header h2{
+        font-size: 5vw;
+        transform: translateX(50%);
+    }
+
+    .view-all{
+        display: none;
+    }
+
+    .books-header.hide a{
+        display: block;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .stats span {
+        font-size: 36px;
+    }
+    
+    .read-more {
+        font-size: 16px;
+    }
+    
+    footer {
+        font-size: 14px;
+    }
+}

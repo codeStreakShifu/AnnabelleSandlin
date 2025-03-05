@@ -6,33 +6,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
     <title>Annabelle Sandlin</title>
 
 </head>
 <body>
-    <header>
-        <div class="logo" data-aos="fade-right" data-aos-duration="1500"><img src="./styles/Annabelle.svg" alt=""></div>
-        <nav data-aos="fade-down" data-aos-duration="1500">
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons" data-aos="fade-left" data-aos-duration="1500">
-            <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
-                <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" title="Twitter">
-                <i class='bx bxl-twitter' ></i>
-            </a>
-            <a href="https://www.youtube.com" target="_blank" title="YouTube">
-                <i class='bx bxl-youtube' ></i>
-            </a>
-        </div>
-    </header>
+
+    <main>
+        <header>
+        
+            <nav data-aos="fade-down" data-aos-duration="1500">
+                <div class="logo" data-aos="fade-right" data-aos-duration="1500"><img src="./styles/Annabelle.svg" alt=""></div>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="author.html">About</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons header" data-aos="fade-left" data-aos-duration="1500">
+                <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                    <i class='bx bxl-youtube' ></i>
+                </a>
+            </div>
+        </header>
     <section class="hero">
         <div class="text">
             <p data-aos="fade-down" data-aos-duration="1500" class="title-p" style="color: #b29564; font-weight: bold;">Best Selling Book</p>
@@ -45,6 +52,7 @@
         </div>
     </section>
 
+    </main>
     
     
     <section class="welcome-section" data-aos="fade-up" data-aos-duration="1500">
@@ -61,12 +69,12 @@
     </section>
 
     <section class="author-story">
-        <img src="./styles/prof-img.png" alt="Grace Bryant Writing">
-        <div class="text">
+        <img src="./styles/prof-img.png" alt="Annabelle Sandlin Writing" data-aos="fade-right" data-aos-duration="2000">
+        <div class="text" data-aos="zoom-in" data-aos-duration="2500">
             <h2>The Story of <br> <span style="color: #000; font-weight: bold; font-size: 48px">Annabelle Sandlin</span></h2>
             <p><strong>A Life of Purpose: Dave Davey's Journey of Faith and Resilience</strong></p>
-            <p>Annabelle Sandlin wrote about her husband, Dave Davey, she tells the deeply emotional story about a man who was struck by polio at an early age. That should have been it but after receiving Christ as his personal Savior and discovering God’s purpose in his life, he rose above his physical ability to fulfill that purpose throughout his life.⁣</p>
-            <a href="#" class="read-more">→ Read More</a>
+            <p>Annabelle Sandlin, a wife, mother, and grandmother, has completed her new book “Beyond Barriers”: a gripping and potent biographical work, which reminds all readers to never stop challenging the obstacles they may face.⁣</p>
+            <a href="author.html" class="read-more">→ Read More</a>
             <div class="stats">
                 <div>
                     <span>10</span>
@@ -80,14 +88,14 @@
         </div>
     </section>
 
-    <section class="books" data-aos="fade-up">
-        <div class="books-header">
+    <section class="books" >
+        <div class="books-header" data-aos="fade-down" data-aos-duration="1500">
             <h2>Best Selling Books</h2>
             <a href="#" class="view-all">→ View All Books</a>
         </div>
         <div class="book-container">
             <div class="book">
-                <div class="book-inner">
+                <div class="book-inner" data-aos="fade-right" data-aos-duration="1500">
                     <div class="book-front">
                         <img src="./styles/feat-book1.jpg" alt="Luctus">
                     </div>
@@ -99,7 +107,7 @@
             </div>
     
             <div class="book">
-                <div class="book-inner">
+                <div class="book-inner" data-aos="zoom-in" data-aos-duration="1500">
                     <div class="book-front">
                         <img src="./styles/book1.jpg" alt="Luctus">
                     </div>
@@ -109,9 +117,9 @@
                 </div>
                 <h3>The Barn That Crowed</h3>
             </div>
-    
+            
             <div class="book">
-                <div class="book-inner">
+                <div class="book-inner" data-aos="fade-right" data-aos-duration="1500">
                     <div class="book-front">
                         <img src="./styles/book2.jpg" alt="Luctus">
                     </div>
@@ -120,19 +128,46 @@
                     </div>
                 </div>
                 <h3>The Barn That Crowed 2</h3>
+
+                
             </div>
+            
         </div>
+       
     </section>
+
+    <header class="footer-header">
+
+        <nav data-aos="fade-down" data-aos-duration="1500">
+            <ul>
+                <li><a href="#" class="active">Author</a></li>
+            </ul>
+            <div class="logo" data-aos="fade-right" data-aos-duration="1500"><img src="./styles/Annabelle.svg" alt=""></div>
+        </nav>
+        
+        
+        <div class="social-icons" data-aos="fade-left" data-aos-duration="1500">
+            <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class='bx bxl-twitter' ></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                <i class='bx bxl-youtube' ></i>
+            </a>
+        </div>
+    </header>
 
     <footer>
         <p>&copy; 2025 Annabelle Sandlin. All rights reserved.</p>
-        <p>Contact us at: <a href="mailto:jonathankithcart@icloud.com">jonathankithcart@icloud.com</a></p>
         <div class="seaamos">
             <h4>Created by Sea Amos - <a href="https://codestreakshifu.github.io/who-am-I/">Designer Joseph</a></h4>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./styles/scripts.js"></script>
+    <script src="scripts.js"></script>
     <script>
         function showMessage() {
             alert('Thank you for your interest! Sample will be available soon.');
