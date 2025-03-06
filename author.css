@@ -78,7 +78,8 @@ main{
     
 }
 .hero .text {
-    max-width: 60%;
+    margin-top: 70px;
+    max-width: 70%;
     text-align: justify;
     padding-bottom: 5rem;
 }
@@ -91,58 +92,53 @@ main{
 .hero p {
     font-size: 20px;
     margin-bottom: 20px;
+    line-height: 1.2;
     color: #666;
+    
 }
 
 .text p{
+
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
+    text-align: justify;
 }
 
 .text .title-p{
     font-size: 2vw;
 }
-.hero button {
-    padding: 12px 24px;
-    font-size: 16px;
-    border: 2px solid #000;
-    background: transparent;
-    color: #000;
-    cursor: pointer;
-    transition: 0.3s;
+
+.text h2{
+    margin-bottom: 30px;
 }
-.hero button:hover {
-    background: #000;
-    color: #fff;
-}
-.hero-image img {
-    max-width: 400px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-    transform: translateX(-50%);
-}
+
+
 
 
 
 
 .welcome-section {
     text-align: center;
-    padding: 60px 10%;
+    padding: 60px 5%;
     background: #f4faff;
     color: #b29564;
 }
 .welcome-section h2 {
+    width: 100%;
     font-size: 36px;
     font-weight: bold;
 }
 .welcome-section p {
     font-family: "Poppins", sans-serif;
+    text-align: center;
     font-weight: 300;
     font-style: normal;
     font-size: 18px;
     color: #666;
-    max-width: 800px;
-    margin: 10px auto;
+    max-width: 90%;
+    margin: 20px auto;
+    
 }
 .awards {
     display: flex;
@@ -287,7 +283,7 @@ main{
 .footer-header{
 
     display: flex;
-    width: 80%;
+    max-width: 100%;
     background: #d4e0f5;
     justify-content: center;
     align-items: center;
@@ -310,6 +306,7 @@ footer {
     background: #d4e0f5;
     color: rgb(64, 64, 66);
     font-family: "Poppins", sans-serif;
+    max-width: 100vw;
     font-weight: 400;
     font-style: normal;
     text-align: center;
