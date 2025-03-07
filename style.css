@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background: #f6feff;
+    background: #e3f9ff;
 }
 header {
     display: flex;
@@ -105,19 +105,24 @@ main{
 
 .text .title-p{
     font-size: 2vw;
+
 }
 .hero .button {
     padding: 12px 24px;
-    font-size: 16px;
+    font-weight: 900s;
+    font-size: 18px;
     text-decoration: none;
-    border: 2px solid #000;
+    border: 1px solid rgb(77, 65, 65);
+    box-shadow: 4.5px 5px #646a88;
     background: transparent;
-    color: #000;
+    color: #ffffff;
+    background-color: #ae9772;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
 }
 .hero .button:hover {
-    background: #000;
+    background: #ea8a8a;
     color: #fff;
 }
 .hero-image img {
@@ -129,7 +134,7 @@ main{
 .books {
     max-width: 100vw;
     text-align: center;
-    padding: 50px 10%;
+    padding: 150px 10%;
     font-family: "Playfair Display", serif; /* Adjust to match the reference font */
     border-bottom: 2px #2c2b2b;
 }
@@ -144,13 +149,14 @@ main{
 
 .books-header h2 {
     font-size: 3rem;
-    margin: 0;
+    color: #464343;
+    margin-bottom: 15px;
 }
 
 
 .view-all {
     font-size: 1.2rem;
-    color: black;
+    color: #464343;
     text-decoration: none;
     font-weight: bold;
 }
@@ -169,6 +175,15 @@ main{
     width: 300px;
     height: 450px;
     perspective: 1000px;
+}
+
+.book h3{
+    margin-top: 30px;
+    border: 1px solid #000;
+    background-color: #e8efe5;
+    border-radius: 5px;
+    box-shadow: 4.5px 5px #747f8b;
+    padding: 15px;
 }
 
 .book-inner {
@@ -242,8 +257,8 @@ main{
 
 .welcome-section {
     text-align: center;
-    padding: 60px 10%;
-    background: #f4faff;
+    padding: 100px 10%;
+    background: #eaf3fb;
     color: #b29564;
 }
 .welcome-section h2 {
@@ -282,8 +297,8 @@ main{
 .author-story {
     display: flex;
     align-items: center;
-    padding: 60px 10% 60px 0;
-    background: #f8f8f8;
+    padding: 100px 10% 0 0;
+    background: #fdeef4;
 }
 .author-story img {
     width: 45%;
@@ -362,14 +377,14 @@ main{
 
 .newsletter-section {
 
-    padding: 150px 0;
+    padding: 100px 0;
     align-items: center;
     justify-content: center;
     text-align: center;
     max-width: 100vw;
 }
 .newsletter-section h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #000;
 }
@@ -384,18 +399,20 @@ main{
 .newsletter-section button {
     padding: 10px;
     margin-top: 10px;
-    background: none;
+    background-color: #00296b;
     border: 1px solid #797575;
+    box-shadow: 2.5px 4px #888888;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.8s ease;
     text-decoration: none;
-    color: #524e4e;
+    color: #ffffff;
 }
 .newsletter-section button:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #ee0000;
 }
 
 .footer-header{
