@@ -105,6 +105,10 @@ html, body {
         text-align: center;
         padding: 40px 5%;
     }
+
+    .author-story p{
+        padding: 0;
+    }
     
     .author-story img {
         width: 100%;
@@ -135,6 +139,7 @@ html, body {
     header {
         padding: 15px 5%;
     }
+
     
     .hero h1 {
         font-size: 36px;
@@ -144,6 +149,9 @@ html, body {
         font-size: 18px;
     }
 
+   .hero-image{
+    margin-top: 20px;
+   }
     .text .title-p{
         font-size: 1.1rem;
     }
@@ -151,11 +159,22 @@ html, body {
     .stats div::before{
         width: 0;
     }
+
     
 .newsletter-section {
 
     padding: 30px 10px 150px 10px;
 
+}
+.welcome-section{
+    padding: 60px 2vw;
+}
+.welcome-section h2{
+    min-width: 100%;
+}
+
+.email-author{
+    padding-top: 150px;
 }
 .newsletter-section h2 {
     font-size: 22px;

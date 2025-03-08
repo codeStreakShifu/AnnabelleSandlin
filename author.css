@@ -136,8 +136,8 @@ main{
     font-style: normal;
     font-size: 18px;
     color: #666;
-    max-width: 90%;
-    margin: 20px auto;
+    max-width: 100%;
+    margin: 20px 0;
     
 }
 .awards {
