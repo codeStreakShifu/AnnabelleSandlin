@@ -27,8 +27,8 @@ header {
 
 .logo img:hover{
     transform: scale(1.15);
-    -webkit-filter: drop-shadow(1px 1px 1px #222 0.6);
     transition: 0.9s ease-in-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 
 }
 
@@ -41,8 +41,7 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    
-    gap: 30px;
+    gap: 20px;
 }
 nav ul li {
 
@@ -60,7 +59,7 @@ nav ul li a {
     transition: all 2s ease-in-out;
 }
  nav ul li a.active {
-    text-shadow: 2.5px 2.5px 2.5px rgb(0, 0, 0, 0.5);
+    text-shadow: 2.5px 2.5px 2.5px rgba(210, 210, 210, 0.5);
     color: black;
     transition: all 2s ease-in-out;
 }
@@ -74,11 +73,13 @@ nav ul li a:hover{
 
 nav ul li:hover{
     transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-     background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 70%), url('./styles/hero-bg.avif');
+    transition: all 1s ease-in-out;
+     background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 100%), url('./styles/hero-bg.avif');
      background-size: cover;
     background-position: center;
     box-shadow: 2.5px 3px #646a88;
+    border-radius: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     z-index: 10;
 }
 
@@ -91,11 +92,12 @@ nav ul li:hover{
 .social-icons a {
     text-decoration: none;
     transition: all 1s ease;
-    color: rgb(255, 255, 255);
+    color: rgb(244, 239, 239);
     font-size: 2rem;
     text-shadow: 2.5px 2.5px 2.5px rgb(0, 0, 0, 0.5);
 
 }
+
 
 .social-icons a:hover {
     transition: all 0.8s ease;
@@ -106,6 +108,7 @@ nav ul li:hover{
 
 .social-icons a:last-child:hover{
     color: red;
+    
 }
 
 
@@ -165,6 +168,7 @@ main{
 }
 .hero .button:hover {
     background: #ea8a8a;
+    
     color: #fff;
 }
 .hero-image img {
@@ -225,6 +229,7 @@ main{
     transition: 0.9s ease-in-out;
     background-color: #462500;
     color: #ffeded;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     box-shadow: 4.5px 5px #194b4b;
 }
 .book-inner {
@@ -501,6 +506,8 @@ main{
 }
 .newsletter-section button:hover {
     color: #fff;
+    transition: all 1s ease;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     background-color: #ee0000;
 }
 
@@ -546,6 +553,12 @@ footer li a{
     font-size: 2vw;
 }
 
+.footer-header-text:hover{
+    transform: scale(1,1);
+    box-shadow: none;
+    background-image: none;
+}
+
 footer {
     justify-content: center;
     align-items: center;
@@ -562,6 +575,7 @@ footer {
 
 footer a{
     text-decoration: none;
+  
 }
 
 .seaamos h4{

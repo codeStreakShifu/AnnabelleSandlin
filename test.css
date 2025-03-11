@@ -56,16 +56,17 @@ html, body {
     
     nav ul {
         display: none;
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        gap: 5px;
         width: 100%;
         text-align: center;
         background: #fff;
-        padding: 15px 0;
+        padding: 7px 0;
         position: absolute;
         top: auto;
         left: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
+
     }
     
     .social-icons + .nav-toggle {
@@ -79,14 +80,16 @@ html, body {
         
     }
     nav ul li a{
-        margin-right: 10px;
+        margin: 0;
+        padding: 0;
+        text-shadow: none;
     }
     .hero, .author-story, .stats, .footer-header {
         overflow-x: hidden; /* Prevent overflow in specific sections */
     }
     
     .hero {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
     
@@ -137,14 +140,37 @@ html, body {
 
 @media screen and (max-width: 768px) {
     header {
-        padding: 15px 5%;
+        padding: 5px 5%;
     }
 
     
     .hero h1 {
         font-size: 36px;
     }
+
+    nav ul{
+        margin-top: 60px;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 42px;
+    }
+
+    nav ul li {
+        padding: 5px;
+
+    }
     
+    nav ul li a{
+        text-shadow: none;
+    }
+
+    .hero{
+        display: block;
+
+    }
+    .hero .text {
+        width: 100%;;
+    }
     .hero p {
         font-size: 18px;
     }
@@ -322,6 +348,8 @@ html, body {
 
     
 
+    
+
 
 
     .footer-header .social-icons a{
@@ -342,7 +370,9 @@ html, body {
         transform: scale(1.05);
     }
 
-    
+    .nav ul li:hover{
+        background: transparent;;
+    }
 
     
     .hero p {
