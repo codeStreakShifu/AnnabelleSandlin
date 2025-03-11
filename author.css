@@ -12,7 +12,8 @@ header {
     padding: 20px 10%;
 }
 .logo {
-    font-size: 58px;
+    
+
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -20,6 +21,14 @@ header {
 .logo img{
     width: 60%;
     height: auto;
+    transition: 0.9s ease-in-out;
+}
+
+.logo img:hover{
+    transform: scale(1.15);
+    transition: 0.9s ease-in-out;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
 }
 
 nav{
@@ -27,25 +36,53 @@ nav{
     align-items: center;
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 nav ul li {
+
     display: inline;
+    position: relative;
+    padding: 12px;
+    transition: all 1s ease-in-out;
 }
 nav ul li a {
     text-decoration: none;
     color: #888;
+    padding: 10px;
     font-size: 1.2rem;
     font-weight: 500;
+    transition: all 2s ease-in-out;
 }
-nav ul li a:hover, nav ul li a.active {
-    color: #000;
+ nav ul li a.active {
+    text-shadow: 2.5px 2.5px 2.5px rgba(210, 210, 210, 0.5);
+    color: black;
+    transition: all 2s ease-in-out;
 }
+
+nav ul li a:hover{
+    transition: all 0.5s ease-in-out;
+    border-radius: 3px;
+     color: rgb(0, 0, 0);
+   
+}
+
+nav ul li:hover{
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+     background: linear-gradient(to right, #ecf7ff 20%, rgba(0,0,0,0) 100%), url('./styles/hero-bg.avif');
+     background-size: cover;
+    background-position: center;
+    box-shadow: 2.5px 3px #646a88;
+    border-radius: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    z-index: 10;
+}
+
+
 .social-icons {
     display: flex;
     gap: 15px;
@@ -53,18 +90,24 @@ nav ul li a:hover, nav ul li a.active {
 
 .social-icons a {
     text-decoration: none;
-    color: #ffffff;
+    transition: all 1s ease;
+    color: rgb(244, 239, 239);
     font-size: 2rem;
-    transition: color 0.3s ease;
-    text-shadow: 
-    1px 1px 2px rgba(0, 0, 0, 0.3),   /* Top-left shadow with 50% opacity */
-    -1px -1px 3px rgba(0, 0, 0, 0.3),  /* Bottom-right shadow with 50% opacity */
-    1px -1px 4px rgba(0, 0, 0, 0.3),   /* Top-right shadow with 50% opacity */
-    -1px 1px 5px rgba(0, 0, 0, 0.3);   /* Bottom-left shadow with 50% opacity */
+    text-shadow: 2.5px 2.5px 2.5px rgb(0, 0, 0, 0.5);
+
 }
 
+
 .social-icons a:hover {
-    color: #fae1b6;
+    transition: all 0.8s ease;
+    transform: scale(1.6);
+    color: #2c4ee4;
+
+}
+
+.social-icons a:last-child:hover{
+    color: red;
+    
 }
 
 main{
@@ -79,7 +122,7 @@ main{
 }
 .hero .text {
     margin-top: 70px;
-    max-width: 70%;
+    max-width: 80%;
     text-align: justify;
     padding-bottom: 5rem;
 }
@@ -114,16 +157,26 @@ main{
 }
 
 
-
-
-
-
 .welcome-section {
     text-align: center;
     padding: 60px 5%;
     background: #f4faff;
     color: #b29564;
 }
+
+.welcome-section.video-trailer{
+    background: linear-gradient(to bottom, #f8fbff 32%, rgba(0,0,0,0) 100%),url('./styles/feat-book1.jpg');
+    
+}
+
+.welcome-section.video-trailer .read-more{
+    background-color: #c3bfbf;
+}
+.welcome-section.video-trailer .read-more:hover{
+    background-color: #b29564;
+    color: black;
+}
+
 .welcome-section h2 {
     width: 100%;
     font-size: 36px;
@@ -162,26 +215,38 @@ main{
 
 .author-story {
     display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
     align-items: center;
-    padding: 60px 10% 60px 0;
+
+
+    max-width: 100vw;
+    padding: 60px 10%;
     background: #f8f8f8;
 }
+
 .author-story img {
-    width: 45%;
+    width: 100%;
     height: 20%;
-    margin-right: 90px;
+
 }
 .author-story .text {
-    max-width: 50%;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
 }
 .author-story h2 {
-    font-size: 24px;
+    padding: 20px;
+    max-width: 100%;
+    font-size: 34px;
     font-weight: bold;
+    text-align: center;
     color: #b29564
 }
 .author-story p {
     font-size: 18px;
-    color: #666;
+ color: #666;
 }
 .stats {
     display: flex;
@@ -231,26 +296,43 @@ main{
     display: block;
     font-size: 50px;
 }
+
+.featured-video{
+    width: 90vw;
+}
 .read-more {
     display: inline-block;
     margin-top: 20px;
-    padding-bottom: 5px;
-    color: #000;
+    padding: 15px;
+    color: #525252;
     text-decoration: none;
     font-size: 18px;
     border-bottom: 1px solid #b29564;
+    transition: all 1s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: #b29564;
+    color: #000000;
+}
+
+.video-interview{
+    display: flex;
+    justify-content: center;
+    background-color: #e6effe;
+    height: 100vh;
 }
 
 .newsletter-section {
 
-    padding: 150px 0;
+    padding: 100px 0;
     align-items: center;
     justify-content: center;
     text-align: center;
     max-width: 100vw;
 }
 .newsletter-section h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     color: #000;
 }
@@ -265,20 +347,41 @@ main{
 .newsletter-section button {
     padding: 10px;
     margin-top: 10px;
-    background: none;
+    background-color: #00296b;
     border: 1px solid #797575;
+    box-shadow: 2.5px 4px #888888;
+    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.8s ease;
     text-decoration: none;
-    color: #524e4e;
+    color: #ffffff;
 }
 .newsletter-section button:hover {
     color: #fff;
-    background-color: #000;
+    transition: all 1s ease;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    background-color: #ee0000;
 }
 
+
+footer .nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+    list-style: none;
+    
+}
+
+footer li a{
+    text-decoration: none;
+    color: #666;
+    
+}
 
 .footer-header{
 
@@ -302,7 +405,15 @@ main{
     font-size: 2vw;
 }
 
+.footer-header-text:hover{
+    transform: scale(1,1);
+    box-shadow: none;
+    background-image: none;
+}
+
 footer {
+    justify-content: center;
+    align-items: center;
     background: #d4e0f5;
     color: rgb(64, 64, 66);
     font-family: "Poppins", sans-serif;
@@ -316,6 +427,7 @@ footer {
 
 footer a{
     text-decoration: none;
+  
 }
 
 .seaamos h4{
@@ -332,4 +444,12 @@ footer a{
 
 .seaamos a:hover,footer a:hover{
     color: #cc0000;
+}
+
+.auth-text-footer{
+    color: #000000;
+}
+
+.auth-text-footer:hover::before{
+    opacity: 0;
 }
