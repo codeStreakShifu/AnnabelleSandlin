@@ -28,7 +28,6 @@ header {
 .logo img:hover{
     transform: scale(1.15);
     transition: 0.9s ease-in-out;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 
 }
 
