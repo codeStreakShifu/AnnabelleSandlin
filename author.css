@@ -7,19 +7,23 @@ body {
 }
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
 }
+
+
+
 .logo {
-    
+    width: 25vw;
 
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.logo img{
-    width: 60%;
+.logo img {
+    max-width: 10vw;
     height: auto;
     transition: 0.9s ease-in-out;
 }
@@ -27,8 +31,6 @@ header {
 .logo img:hover{
     transform: scale(1.15);
     transition: 0.9s ease-in-out;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-
 }
 
 nav{
