@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Annabelle Sandlin</title>
+    <link rel="stylesheet" href="author.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="%23b29564" fill-opacity="0.1" fill-rule="evenodd"/%3E%3C/svg%3E');
+            z-index: -1;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #b29564;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #96804f;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .thank-you-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thank-you-modal .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .thank-you-modal .modal-header i {
+            font-size: 50px;
+            color: #4caf50;
+        }
+
+        .thank-you-modal .modal-header h2 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .thank-you-modal .modal-body p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .thank-you-modal .modal-close-btn {
+            background-color: #b29564;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .thank-you-modal .modal-close-btn:hover {
+            background-color: #96804f;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav data-aos="fade-down" data-aos-duration="1500">
+                <div class="logo" data-aos="fade-right" data-aos-duration="1500">
+                    <a href="index.html">
+                        <img src="./logo.png" alt="">
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="author.html">About</a></li>
+                    <li class="submenu"><a href="#">Books</a>
+                        <ul class="sub-menu">
+                            <li><a href="dave.html">Dave Davey</a></li>
+                            <li><a href="dave.html">Ellis Sandlin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons header" data-aos="fade-left" data-aos-duration="1500">
+                <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+        </header>
+        <section class="contact-section" data-aos="fade-up" data-aos-duration="1500">
+            <h1>Get in Touch</h1>
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                <p>Email: contact@annabellesandlin.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Literary Agent: agent@literaryagency.com</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="thank-you-modal" class="thank-you-modal">
+        <div class="modal-content" data-aos="zoom-in">
+            <div class="modal-header">
+                <i class='bx bx-check-circle'></i>
+                <h2>Thank You!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your message has been sent successfully.</p>
+                <p>We'll get back to you within 24-48 hours.</p>
+            </div>
+            <button class="modal-close-btn">Got it!</button>
+        </div>
+    </div>
+
+    <div class="footer-header">
+        <nav data-aos="fade-down" data-aos-duration="1500">
+            <ul>
+                <li class="footer-header-text"><a href="#" class="auth-text-footer">Author</a></li>
+            </ul>
+            <div class="logo" data-aos="zoom-in" data-aos-duration="2000">
+                <a href="index.html">
+                    <img src="./styles/as.svg" alt="Annabelle Sandlin Logo">
+                </a>
+            </div>
+        </nav>
+
+        <div class="social-icons" data-aos="fade-left" data-aos-duration="1500">
+            <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                <i class='bx bxl-youtube'></i>
+            </a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="nav" data-aos="fade-down" data-aos-duration="1500">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="author.html">Author</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <p>&copy; 2025 <a href="#" style="text-decoration: none; color: rgb(64, 64, 66);">Annabelle Sandlin</a>. All
+            rights reserved.</p>
+
+
+        <div class="seaamos">
+            <h4> Created by <a href="https://seaamos.com/">Sea Amos</a> - <a
+                    href="https://codestreakshifu.github.io/who-am-I/">Designer Joseph</a></h4>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function submitForm(event) {
+            event.preventDefault();
+            // Add your form submission logic here
+            document.getElementById('thank-you-modal').style.display = 'flex';
+            document.getElementById('contactForm').reset();
+            return false;
+        }
+
+        document.querySelector('.modal-close-btn').addEventListener('click', function () {
+            document.getElementById('thank-you-modal').style.display = 'none';
+        });
+    </script>
+
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+
+</html>

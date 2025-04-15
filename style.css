@@ -59,7 +59,7 @@ nav ul li a {
     text-decoration: none;
     color: #888;
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 24px;
     font-weight: 500;
     transition: all 2s ease-in-out;
 }
@@ -85,14 +85,16 @@ nav ul li:hover {
     background-position: center;
     box-shadow: 2.5px 3px #646a88;
     border-radius: 4px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
     z-index: 10;
 }
 
 .submenu {
     position: relative;
     display: block;
+
 }
+
+
 
 .sub-menu {
     list-style: none;
@@ -101,15 +103,23 @@ nav ul li:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 20px 0;
+    padding-top: 15px;
     display: none;
     /* Hide submenu by default */
     min-width: 250px;
 }
 
 nav ul .submenu:hover .sub-menu {
-    display: block;
+    display: flex;
     /* Show submenu on hover */
+}
+
+.submenu li{
+    min-width: fit-content;
+}
+
+.submenu li a{
+    font-size: 18px;
 }
 
 .social-icons {
@@ -121,7 +131,7 @@ nav ul .submenu:hover .sub-menu {
     text-decoration: none;
     transition: all 1s ease;
     color: rgb(244, 239, 239);
-    font-size: 2rem;
+    font-size: 40px;
     text-shadow: 2.5px 2.5px 2.5px rgb(0, 0, 0, 0.5);
 
 }
@@ -727,7 +737,10 @@ main {
     background-color: #ee0000;
 }
 
-
+.footer{
+    top: 100%;
+    bottom: 0;
+}
 
 
 footer .nav ul {
