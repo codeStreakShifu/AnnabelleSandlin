@@ -55,7 +55,7 @@
                     </a>
                 </div>
             </nav>
-            
+
         </header>
 
         <section class="hero">
@@ -158,25 +158,56 @@
 
     <section class="video-interview">
 
-        <h1>Discover Annabelle's thoughts, inspirations, and behind-the-scenes stories in these exclusive interviews.</h1>
-        
+        <h1>Discover Annabelle's thoughts, inspirations, and behind-the-scenes stories in these exclusive interviews.
+        </h1>
+
         <div class="video-gallery">
             <!-- Repeat video-card for each interview -->
             <div class="video-card" data-src="./styles/video/america-tonight.mp4">
                 <video src="./styles/video/america-tonight.mp4" muted preload="metadata"></video>
-                <div class="overlay">Interview with America Tonight with Kate Delaney</div>
+                <div class="overlay">
+                    <p>Interview with America Tonight with Kate Delaney</p>
+                </div>
             </div>
             <div class="video-card" data-src="./styles/video/booktrailer.mp4">
                 <video src="./styles/video/booktrailer.mp4" muted preload="metadata"></video>
-                <div class="overlay">Inspiration Behind the Book: Beyond Bariers</div>
+                <div class="overlay">
+                    <p>Inspiration Behind the Book: Beyond Bariers </p>
+                </div>
             </div>
             <div class="video-card" data-src="./styles/video/featured-author.mp4">
                 <video src="./styles/video/featured-author.mp4" muted preload="metadata"></video>
-                <div class="overlay">Exclusive Q&A with Readers</div>
+                <div class="overlay">
+                    <p>Be Inspired by Dave Davey’s Resilience and Optimism </p>
+                </div>
             </div>
+
+            <div class="video-card" data-src="./styles/video/wwmt-tv.mp4">
+                <video src="./styles/video/wwmt-tv.mp4" muted preload="metadata"></video>
+                <div class="overlay">
+                    <p>WWMT-TV Newschannel 3 Interview with Lori</p>
+                </div>
+            </div>
+
+            <div class="video-card" data-src="https://www.youtube.com/embed/TwAWAFwegs4">
+                <iframe src="https://www.youtube.com/embed/TwAWAFwegs4" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="width: 100%; height: 100%;">
+                </iframe>
+                <div class="overlay">
+                    <p>The Festival Of Storytellers 2021</p>
+                </div>
+            </div>
+
             <!-- Add more video cards here -->
         </div>
 
+
+        <div class="event-but">
+            <button class="custom-btn btn-12"><a href=""><span> → Go to Events</span><span>View Events and Achievements of
+                        Annabelle</span></a></button>
+
+        </div>
         <!-- Modal for playing video -->
         <div class="modal" id="videoModal">
             <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -190,7 +221,7 @@
     <div class="footer-header">
 
         <nav data-aos="fade-down" data-aos-duration="1500">
-            
+
             <div class="logo" data-aos="zoom-in" data-aos-duration="2000"><a href="index.html">
                     <img src="./logo.png" alt="">
                 </a></div>
@@ -273,31 +304,31 @@
     <script>
         // Get all video elements
         const videos = document.querySelectorAll('.video-card video');
-        
+
         // Set thumbnail for each video
         videos.forEach(video => {
             // Load video metadata
-            video.addEventListener('loadedmetadata', function() {
+            video.addEventListener('loadedmetadata', function () {
                 // Set current time to 3 seconds to grab a frame as thumbnail
                 this.currentTime = 12;
             });
-            
+
             // Once we've seeked to the time, grab the frame
-            video.addEventListener('seeked', function() {
+            video.addEventListener('seeked', function () {
                 // Create a canvas element
                 const canvas = document.createElement('canvas');
                 canvas.width = video.videoWidth;
                 canvas.height = video.videoHeight;
-                
+
                 // Draw the video frame to canvas
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                
+
                 // Convert canvas to data URL and set as poster
                 try {
                     const dataURL = canvas.toDataURL();
                     video.setAttribute('poster', dataURL);
-                } catch(e) {
+                } catch (e) {
                     console.log('Could not create thumbnail:', e);
                 }
             });
