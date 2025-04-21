@@ -14,10 +14,11 @@
     <style>
         
         
-        
+       
         
 
         .events-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: fit-content;
             padding: 80px 20px;
             max-width: 1200px;
@@ -61,6 +62,10 @@
         .event-details {
             padding: 20px;
             flex-grow: 1;
+        }
+        
+        .event-details a{
+            margin-top: 20px;
         }
 
         .event-details h3 {
@@ -141,30 +146,25 @@
         <section class="events-section" data-aos="fade-up" data-aos-duration="1500">
             <h1>Upcoming Events</h1>
 
-            <!-- Temporary message when no events are scheduled -->
-            <div class="no-events" data-aos="fade-up" style="text-align: center; padding: 40px; color: #666;">
-                <i class='bx bx-calendar' style="font-size: 3em; color: #b29564; margin-bottom: 20px;"></i>
-                <h3>No Upcoming Events</h3>
-                <p>Check back soon for future book signings and author events!</p>
-            </div>
+            
 
-            <!-- Commented event cards for future use
-            <div class="event-card" data-aos="fade-up">
+            
+            <div class="event-card" data-aos="fade-up" style="margin-top: 30px;">
                 <div class="event-date">
                     <span class="day">15</span>
-                    <span class="month">MAY</span>
+                    <span class="month">September</span>
                 </div>
                 <div class="event-details">
-                    <h3>Book Signing & Reading</h3>
-                    <p>Join Annabelle for a special reading and signing of her latest book.</p>
+                    <h3>Manila International Book Fair</h3>
+                    <p>Beyond Barriers will be on the Prime Spot display at the largest book fair in Asia.</p>
                     <div class="event-location">
                         <i class='bx bx-map'></i>
-                        <span>Barnes & Noble, New York City</span>
+                        <span>Manila, Philippines</span>
                     </div>
-                    <a href="#" class="register-btn">Register Now</a>
+                    <a href="#" class="register-btn">Visit MIBF</a>
                 </div>
             </div>
-
+            <!-- Commented event cards for future use
             <div class="event-card" data-aos="fade-up">
                 <div class="event-date">
                     <span class="day">22</span>
@@ -181,6 +181,13 @@
                 </div>
             </div>
             -->
+
+            <!-- Temporary message when no events are scheduled -->
+            <div class="no-events" data-aos="fade-up" style="text-align: center; padding: 40px; color: #666;">
+                <i class='bx bx-calendar' style="font-size: 3em; color: #b29564; margin-bottom: 20px;"></i>
+                <h3>No more Upcoming Events</h3>
+                <p>Check back soon for future book signings and author events!</p>
+            </div>
         </section>
     </main>
     <div class="footer-header">

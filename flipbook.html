@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="author.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="test.css">
     <title>Annabelle Sandlin</title>
     <script src="https://cdn.jsdelivr.net/npm/pageflip/dist/js/pageflip.browser.min.js"></script>
@@ -22,18 +22,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
     <style>
         #book {
-            width: 100%;
-            height: auto;
-            box-shadow: 4px 4px 25px rgba(0, 0, 0, 1);
+            width: fit-content;
+            margin: 0 auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
 
-        @media (max-width: 600px) {
-            #book {
-                max-width: 80vw;
-                height: 90vh;
-                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-                border-radius: 5px;
-            }
+        #book canvas {
+            box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
+
+        #book:hover {
+            transform: scale(1.02);
+        }
+
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .error {
+            text-align: center;
+            padding: 20px;
+            color: #ff4444;
+        }
+
+        /* Page flip animation enhancements */
+        .stf__parent {
+            perspective: 1000px;
+        }
+
+        .stf__wrapper {
+            transform-style: preserve-3d;
+        }
+
+        .stf__item {
+            transition: transform 0.5s ease;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        .stf__item.--right {
+            transform-origin: left center;
+        }
+
+        .stf__item.--left {
+            transform-origin: right center;
+        }
+
+        /* Page corner hover effect */
+        .stf__corner {
+            transition: all 0.3s ease;
+        }
+
+        .stf__corner:hover {
+            background: rgba(178,149,100,0.2);
         }
     </style>
 </head>
@@ -47,27 +98,35 @@
 
                 <div class="logo" data-aos="fade-right" data-aos-duration="1500">
                     <a href="index.html">
-                        <img src="./styles/as.svg" alt="">
+                        <img src="./logo.png" alt="">
                     </a>
                 </div>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="author.html" class="active">About</a></li>
-                    <li><a href="#">Books</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="author.html">About</a></li>
+                    <li class="submenu"><a href="#">Books</a>
+                        <ul class="sub-menu">
+                            <li><a href="dave.html">Dave Davey</a></li>
+                            <li><a href="dave.html">Ellis Sandlin</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="events.html">Events</a></li>
                 </ul>
+
+                <div class="social-icons header" data-aos="fade-left" data-aos-duration="1500">
+                    <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                </div>
             </nav>
-            <div class="social-icons header" data-aos="fade-left" data-aos-duration="1500">
-                <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
-                    <i class='bx bxl-facebook'></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" title="Twitter">
-                    <i class='bx bxl-twitter'></i>
-                </a>
-                <a href="https://www.youtube.com" target="_blank" title="YouTube">
-                    <i class='bx bxl-youtube'></i>
-                </a>
-            </div>
+
         </header>
 
         <section class="hero">
@@ -76,58 +135,188 @@
         </section>
     </main>
 
+        <div class="footer-header">
+
+            <nav data-aos="fade-down" data-aos-duration="1500">
+
+                <div class="logo" data-aos="zoom-in" data-aos-duration="2000"><a href="index.html">
+                        <img src="./logo.png" alt="">
+                    </a></div>
+            </nav>
+
+
+        </div>
+
+        <footer>
+            <div class="nav" data-aos="fade-down" data-aos-duration="1500">
+                <div class="social-icons footer" data-aos="fade-left" data-aos-duration="1500">
+                    <a href="https://www.facebook.com/annedaveykoomans/" target="_blank" title="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                </div>
+
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="author.html">About</a></li>
+                    <li><a href="#">Books</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+
+            </div>
+
+            <p>&copy; 2025 <a href="#" style="text-decoration: none; color: rgb(64, 64, 66);">Annabelle Sandlin</a>. All
+                rights reserved.</p>
+
+            <div class="seaamos">
+                <h4> Created by <a href="https://seaamos.com/">Sea Amos</a> - <a
+                        href="https://codestreakshifu.github.io/who-am-I/">Designer Joseph</a></h4>
+            </div>
+
+        </footer>
+
+
     <script>
         const bookElement = document.getElementById("book");
+
+        async function showCoverOnly(pdfUrl) {
+            try {
+                // Load the PDF
+                const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+                
+                // Get only the first page (cover)
+                const coverPage = await pdf.getPage(1);
+                
+                // Calculate dimensions
+                const screenWidth = window.innerWidth;
+                const viewport = coverPage.getViewport({ scale: 1 });
+                const scale = (screenWidth * 0.4) / viewport.width;
+                const scaledViewport = coverPage.getViewport({ scale });
+
+                // Create canvas
+                const canvas = document.createElement("canvas");
+                canvas.width = scaledViewport.width;
+                canvas.height = scaledViewport.height;
+                
+                // Render cover page
+                const context = canvas.getContext("2d");
+                await coverPage.render({
+                    canvasContext: context,
+                    viewport: scaledViewport
+                }).promise;
+
+                // Clear existing content and append canvas
+                bookElement.innerHTML = '';
+                bookElement.appendChild(canvas);
+                
+                // Add click handler to show full flipbook
+                canvas.addEventListener('click', () => initializeFlipbook(pdfUrl));
+            } catch (err) {
+                console.error("Error loading cover:", err);
+            }
+        }
+
+        async function initializeFlipbook(pdfUrl) {
+            try {
+                const { width, height } = getResponsiveSize();
+                
+                // Configure PageFlip with enhanced settings
+                const flipBook = new St.PageFlip(bookElement, {
+                    width: width,
+                    height: height,
+                    size: "fixed",
+                    minWidth: 300,
+                    maxWidth: 1000,
+                    minHeight: 400,
+                    maxHeight: 1200,
+                    maxShadowOpacity: 0.5,
+                    showCover: true,
+                    flippingTime: 1000,
+                    usePortrait: true,
+                    startPage: 1,
+                    autoSize: true,
+                    drawShadow: true,
+                    renderWhileFlipping: true,
+                    useMouseEvents: true,
+                    clickEventForward: true,
+                    swipeDistance: 30,
+                    showPageCorners: true,
+                    disableFlipByClick: false,
+                    style: {
+                        padding: 0
+                    }
+                });
+
+                // Load the PDF
+                const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+                const pages = [];
+
+                // Loading indicator
+                bookElement.innerHTML = '<div class="loading">Loading book pages...</div>';
+
+                // Render all pages
+                for (let i = 1; i <= pdf.numPages; i++) {
+                    const page = await pdf.getPage(i);
+                    const viewport = page.getViewport({ scale: 2 });
+                    const canvas = document.createElement("canvas");
+                    const context = canvas.getContext("2d");
+                    
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    
+                    await page.render({
+                        canvasContext: context,
+                        viewport: viewport
+                    }).promise;
+                    
+                    pages.push(canvas.toDataURL("image/png"));
+                }
+
+                // Load pages into flipbook
+                flipBook.loadFromImages(pages);
+
+                // Add page flip events
+                flipBook.on('flip', (e) => {
+                    const pageNum = e.data + 1;
+                    console.log(`Flipped to page ${pageNum}`);
+                });
+
+                // Add keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight') flipBook.flipNext();
+                    if (e.key === 'ArrowLeft') flipBook.flipPrev();
+                });
+
+                // Update on window resize
+                window.addEventListener("resize", () => {
+                    const { width, height } = getResponsiveSize();
+                    flipBook.update({ width, height });
+                });
+
+            } catch (err) {
+                console.error("Error initializing flipbook:", err);
+                bookElement.innerHTML = '<div class="error">Error loading book. Please try again.</div>';
+            }
+        }
 
         function getResponsiveSize() {
             const screenWidth = window.innerWidth;
             const screenHeight = window.innerHeight;
 
-            let width = Math.min(600, screenWidth * 0.8);  // Max 600px or 80% of screen width
-            let height = Math.min(800, screenHeight * 9); // Max 800px or 80% of screen height
+            let width = Math.min(600, screenWidth * 0.8);
+            let height = Math.min(800, screenHeight * 0.7);
 
             return { width, height };
         }
 
-        // Initialize Flipbook with responsive size
-        const { width, height } = getResponsiveSize();
-
-        const flipBook = new St.PageFlip(bookElement, {
-            width: width,
-            height: height,
-            radius: 10,
-            maxShadowOpacity: 0.5
-        });
-
-        // Update Flipbook size on window resize
-        window.addEventListener("resize", () => {
-            const { width, height } = getResponsiveSize();
-            flipBook.update({
-                width: width,
-                height: height
-            });
-        });
-
-        async function loadPDF(pdfUrl) {
-            const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
-            const pages = [];
-            for (let i = 1; i <= pdf.numPages; i++) {
-                const page = await pdf.getPage(i);
-                const viewport = page.getViewport({ scale: 2 });
-                const canvas = document.createElement("canvas");
-                const context = canvas.getContext("2d");
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-                await page.render({ canvasContext: context, viewport: viewport }).promise;
-                pages.push(canvas.toDataURL("image/png"));
-            }
-            flipBook.loadFromImages(pages);
-        }
-
-        loadPDF("./sample.pdf").catch(err => {
-            console.error("Error loading PDF:", err);
-        });
-
+        // Start with cover page
+        showCoverOnly("./sample.pdf");
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -136,3 +325,4 @@
 </body>
 
 </html>
+``` 

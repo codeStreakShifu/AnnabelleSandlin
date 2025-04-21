@@ -482,12 +482,18 @@ main{
     padding-bottom: 120px;
     position: relative;
     
+    
 }
+
+button.custom-btn {
+    background-color: #e6effe;
+}
+
 .btn-12{
     left: 60%;
     transform: translateX(-30%);
     position: relative;
-    background-color: none;
+    
     border:none;
     box-shadow: none;
     text-align: center;
@@ -510,7 +516,7 @@ main{
   }
   .btn-12 span {
     
-  background: linear-gradient(0deg, #241700 0%, #99712d 100%);
+    background: linear-gradient(0deg, #241700 0%, #99712d 100%);
     display: block;
     position: absolute;
     width: 40%;
